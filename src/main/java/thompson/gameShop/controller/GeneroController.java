@@ -42,7 +42,7 @@ public class GeneroController {
 			.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/tipo/{tipo}")
+	@GetMapping("/genero/{genero}")
 	public ResponseEntity<List<Genero>> getByGenero(@PathVariable String genero){
 		
 		return ResponseEntity.ok(generoRepository.findAllByGeneroContainingIgnoreCase(genero));	
